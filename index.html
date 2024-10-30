@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" title="" type="" />
+    <title>Get Hours</title>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="frist">
+            <input type="text" placeholder="Enter Number" name="" id="" value="" />
+            <span class="cal">Calc</span>
+        </div>
+        <div class="second">
+            <h5 class="word"> Enter Number</h5>
+            <!--<span>Number Of Hours</span>-->
+            <!--<span>Number Of Minutes</span>-->
+            <!--<span>Number Of Milliseconds</span>-->
+        </div>
+    </div>
+    <script>
+        let theinput = document.querySelector(".frist input");
+        let spanel = document.querySelector(".cal");
+        let section = document.querySelector(".second");
+        let text = document.querySelector(".word");
+
+        spanel.onclick = function() {
+            if (theinput.value == "") {
+                text.innerHTML = "Please Enter Number";
+            } else if (isNaN(theinput.value)) {
+                text.innerHTML = "Not Available, please enter a number";
+            } else {
+                section.innerHTML = "";
+
+                let one = document.createElement("span");
+                let text_one = document.createTextNode(`Number of Hours = ${parseInt(theinput.value)}`);
+                one.appendChild(text_one);
+
+                let two = document.createElement("span");
+                let text_two = document.createTextNode(`Number of Minutes = ${parseInt(theinput.value * 60)}`);
+                two.appendChild(text_two);
+
+                let three = document.createElement("span");
+                let text_three = document.createTextNode(`Number of Seconds = ${parseInt(theinput.value * 60 * 60)}`);
+                three.appendChild(text_three);
+
+                section.appendChild(one);
+                section.appendChild(two);
+                section.appendChild(three);
+            }
+        }
+    </script>
+</body>
+
+</html>

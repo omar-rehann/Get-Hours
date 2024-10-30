@@ -1,0 +1,51 @@
+body {
+    padding: 25px;
+    background-color: #ddd;
+    background-image: url(two.avif);
+    background-size: cover;
+    height: 100vh;
+}
+
+.continer {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.continer .frist {
+    padding: 4px;
+    border-radius: 10px;
+    background-color: #ccc;
+    height: 20vh;
+}
+
+.continer .frist input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    border: none;
+}
+
+.continer .frist span {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.continer .second span {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    margin-top: 10px;
+}
+
+.continer .second h5 {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
